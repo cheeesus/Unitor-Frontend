@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    /* ===== fonts =====*/
+    --poppins : 'Poppins' , sans-serif;
+    --montserrat : 'Montserrat', sans-serif;
+
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #6C5DD3;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    --accent-one : #FFA2C0;
+    --accent-two : #FFCE73;
+    --titles : #1B1D21;
+    --secondary : #0049C6;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark{
+    --body-color: #1B1D21;
+    --sidebar-color: #242526;
+    --primary-color: #6C5DD3;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+    --titles: #6C5DD3;
+}
+
+.production-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.production-details .station {
+    width: 40%;
+    height: 300px;
+    overflow-y: auto;
+    background-color: var(--sidebar-color);
+    padding: 15px 14px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+    scrollbar-color: var(--body-color);
+    transition: scrollbar-color 0.3s ease-out;
+}
+/*.production-details .station:hover {
+    scrollbar-color: var(--primary-color);
+}
+.production-details .station::-webkit-scrollbar-thumb,.production-details .station::-ms-overflow-style {
+    border: 5px solid transparent;
+    border-radius: 100px;
+    background-color: var(--primary-color);
+    background-clip: content-box;
+}*/
+.production-details .station .station-title {
+    margin: 0.7rem 0;
+    font-size: 30px;
+    font-family: var(--montserrat);
+    font-weight: bolder;
+    color: var(--titles);
+}
+.station .station-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.station .station-data .data {
+    text-align: center;
+    color: var(--text-color);
+}
+.station .station-data .data .title {
+    font-weight: bolder;
+    color: var(--text-color);
+}
+.station .station-data .data li {
+    list-style: none;
+}

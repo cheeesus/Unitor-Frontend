@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/production.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Production</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">LOGO</span>
+                    <span class="profession">Monitor & Go</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box"><i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span></a></li>
+                    <li class="nav-link">
+                        <a href="/production">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Production</span></a></li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-bolt icon'></i>
+                            <span class="text nav-text">Power Quality</span></a></li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Analytics</span></a></li>
+                </ul></div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span></a></li>
+
+                        <li class="mode">
+                            <div class="sun-moon">
+                                <i class='bx bx-moon icon moon'></i>
+                                <i class='bx bx-sun icon sun'></i>
+                            </div>
+                            <span class="mode-text text">Dark mode</span>
+        
+                            <div class="toggle-switch">
+                                <span class="switch"></span>
+                            </div>
+                        </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home-section">
+        <h2 class="text">Production</h2>
+        <section class="production-details home">
+            <div class="station">
+                <h3 class="station-title">Station 1</h3>
+                <div class="station-data">
+                    <ul class="data">
+                        <li class="title">Current (A)</li>
+                        <% station1.forEach(value => { %> 
+                        <li> <%= value.currentReading %> </li>
+                        <% }) %> 
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Voltage (V)</li>
+                        <% station1.forEach(value => { %> 
+                            <li> <%= value.voltageReading %> </li>
+                        <% }) %>
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Frequency (Hz)</li>
+                        <% station1.forEach(value => { %> 
+                            <li> <%= value.currentReading %> </li>
+                        <% }) %>
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Power (Wh)</li>
+                        <% station1.forEach(value => { %> 
+                        <% const power = value.currentReading * value.voltageReading %> 
+                            <li> <%= power.toFixed(2) %> </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="station">
+                <h3 class="station-title">Station 2</h3>
+                <div class="station-data">
+                    <ul class="data">
+                        <li class="title">Current (A)</li>
+                        <% station2.forEach(value => { %> 
+                        <li> <%= value.currentReading %> </li>
+                        <% }) %> 
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Voltage (V)</li>
+                        <% station2.forEach(value => { %> 
+                            <li> <%= value.voltageReading %> </li>
+                        <% }) %>
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Frequency (Hz)</li>
+                        <% station2.forEach(value => { %> 
+                            <li> <%= value.currentReading %> </li>
+                        <% }) %>
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Power (Wh)</li>
+                        <% station2.forEach(value => { %> 
+                        <% const power = value.currentReading * value.voltageReading %> 
+                            <li> <%= power.toFixed(2) %> </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="station">
+                <h3 class="station-title">Station 3</h3>
+                <div class="station-data">
+                    <ul class="data">
+                        <li class="title">Current (A)</li>
+                        <% station3.forEach(value => { %> 
+                        <li> <%= value.currentReading %> </li>
+                        <% }) %> 
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Voltage (V)</li>
+                        <% station3.forEach(value => { %> 
+                            <li> <%= value.voltageReading %> </li>
+                        <% }) %>
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Frequency (Hz)</li>
+                        <% station3.forEach(value => { %> 
+                            <li> <%= value.currentReading %> </li>
+                        <% }) %>
+                    </ul>
+                    <ul class="data">
+                        <li class="title">Power (Wh)</li>
+                        <% station3.forEach(value => { %> 
+                        <% const power = value.currentReading * value.voltageReading %> 
+                            <li> <%= power.toFixed(2) %> </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <div class="station">
+                <canvas id="myChart" style="width:100%; height: 300px;"></canvas>
+            </div>
+        </section>
+        
+    </section>
+    
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

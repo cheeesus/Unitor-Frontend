@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+  <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+  <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.candy.js"></script>
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <nav class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="../unitor.png" alt="">
+        </span>
+
+        <div class="text logo-text">
+          <span class="name">UNITOR</span>
+          <span class="profession">Monitor & Go</span>
+        </div>
+      </div>
+
+      <i class="bx bx-chevron-right toggle"></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <li class="search-box">
+          <i class="bx bx-search icon"></i>
+          <input type="text" placeholder="Search..." />
+        </li>
+
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="/">
+              <i class="bx bx-home-alt icon"></i>
+              <span class="text nav-text">Dashboard</span></a>
+          </li>
+          <li class="nav-link">
+            <a href="/production">
+              <i class="bx bx-bar-chart-alt-2 icon"></i>
+              <span class="text nav-text">Production</span></a>
+          </li>
+
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bxs-bolt icon"></i>
+              <span class="text nav-text">Power Quality</span></a>
+          </li>
+
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bx-pie-chart-alt icon"></i>
+              <span class="text nav-text">Analytics</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bottom-content">
+        <li class="">
+          <a href="#">
+            <i class="bx bx-log-out icon"></i>
+            <span class="text nav-text">Logout</span></a>
+        </li>
+
+        <li class="mode">
+          <div class="sun-moon">
+            <i class="bx bx-moon icon moon"></i>
+            <i class="bx bx-sun icon sun"></i>
+          </div>
+          <span class="mode-text text">Dark mode</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="home-section">
+    <h2 class="text">Dashboard</h2>
+
+    <div class="home">
+      <div class="overview-boxes">
+        <div class="box">
+          <i class="bx bxs-thermometer icons one"></i>
+          <div class="bottom-side">
+            <div class="box-topic">Temperature</div>
+            <div class="number temperature"></div>
+          </div>
+        </div>
+        <div class="box">
+          <i class="bx bx-droplet icons two"></i>
+          <div class="bottom-side">
+            <div class="box-topic">Humidity</div>
+            <div class="number humidity"></div>
+          </div>
+        </div>
+        <div class="box">
+          <i class="bx bx-sun icons three"></i>
+          <div class="bottom-side">
+            <div class="box-topic">Illuminance</div>
+            <div class="number lux"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="plots">
+      <div id="power-plot" class="plot"></div>
+      <div id="voltage-plot" class="plot"></div>
+      <div id="current-plot" class="plot"></div>
+    </div>
+  </section>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
