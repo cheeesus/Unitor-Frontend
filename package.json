@@ -1,12 +1,12 @@
 {
-  "name": "project-thingspeak",
+  "name": "project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "devStart": "nodemon index.js"
   },
-  "author": "",
+  "author": "Hiba Bourezg",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
